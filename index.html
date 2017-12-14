@@ -1,0 +1,485 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>东湖绿道</title>
+    <link rel="stylesheet" href="./css/mobilReset.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jq.js"></script>
+    <script src="./js/swiper-3.4.2.jquery.min.js"></script>
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .pagesOne,
+        pages-hmoe {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            display: none;
+        }
+        
+        .pagesOne .bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .pagesOne .text {
+            width: 74%;
+            display: block;
+            left: 50%;
+            margin-left: -37%;
+            top: 5%;
+            position: absolute;
+            z-index: 2;
+        }
+        
+        .user-text {
+            width: 94%;
+            overflow: hidden;
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            margin-left: -47%;
+            top: 15%;
+        }
+        
+        .user-text-box {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .urser-text {
+            width: 100%;
+        }
+        
+        .user {
+            position: absolute;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            margin-left: -30px;
+            border-radius: 50%;
+            top: 50%;
+            margin-top: -30px;
+        }
+        
+        .pagesOne .list-text {
+            width: 51.5%;
+            display: block;
+            position: absolute;
+            top: 36%;
+            left: 50%;
+            margin-left: -25.7%;
+            z-index: 2;
+        }
+        
+        .list {
+            position: absolute;
+            width: 90%;
+            height: auto;
+            left: 50%;
+            margin-left: -45%;
+            z-index: 5;
+            top: 40%;
+        }
+        
+        .list-box {
+            position: absolute;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .list-title {
+            width: 100%;
+            height: 100%;
+            font-size: 12px;
+            text-align: center;
+            color: #fff;
+            line-height: 20px;
+        }
+        
+        .list-title span {
+            font-size: 16px;
+            color: #ffe8ac;
+            line-height: 20px;
+            display: inline;
+            margin: 0 10px;
+        }
+        
+        .list-box ul {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .list-box ul li {
+            width: 100%;
+            height: 42px;
+            overflow: hidden;
+            margin: 4% 0;
+        }
+        
+        .list-box ul li .user-img {
+            width: 68px;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            float: left;
+        }
+        
+        .list-box ul li>span {
+            display: inline;
+            color: #fff;
+            font-size: 14px;
+            float: left;
+            line-height: 42px;
+        }
+        
+        .list-box ul li .user-img span {
+            display: inline;
+            position: absolute;
+            border-radius: 50%;
+            background: #ffe9ad;
+            text-align: center;
+            line-height: 14px;
+            width: 14px;
+            height: 14px;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            font-size: 10px;
+            color: #9f2e29;
+        }
+        
+        .list-box ul li .user-img img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            left: 10px;
+            z-index: 0;
+            display: inline;
+        }
+        
+        .user-money {
+            float: right;
+            color: #fff;
+            font-size: 14px;
+            line-height: 42px;
+        }
+        
+        .user-money span {
+            display: inline;
+            margin: 0 4px;
+            font-size: 16px;
+            color: #ffe8ac;
+        }
+        
+        .list-box .button {
+            width: 45%;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .show {
+            display: block!important;
+        }
+        
+        .pages-hmoe .bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+        
+        .pages-hmoe .btn {
+            width: 46%;
+            position: absolute;
+            z-index: 1;
+            bottom: 10%;
+            left: 50%;
+            margin-left: -20%;
+        }
+        
+        .pages-hmoe .text {
+            width: 80%;
+            height: 20px;
+            position: absolute;
+            left: 50%;
+            margin-left: -40%;
+            bottom: 3%;
+            color: #3a342a;
+            font-size: 14px;
+            overflow: hidden;
+        }
+        
+        .pages-hmoe .text .swiper-slide {
+            line-height: 20px;
+            color: #3a342a;
+            font-size: 0.725rem;
+        }
+        
+        .pages-hmoe .text .swiper-slide img {
+            display: block;
+            float: left;
+            width: 20px;
+            height: 20px;
+        }
+        
+        .model .text {
+            width: 86%;
+            display: block;
+            margin: 0 auto;
+            margin-top: 37%;
+        }
+        
+        .model {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 999;
+            background: rgba(0, 0, 0, .8);
+            display: none;
+            top: 0;
+            left: 0;
+        }
+        
+        .model .button {
+            width: 60%;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .quan {
+            width: 150px;
+            height: 150px;
+            background: url("./images/quan.png")no-repeat;
+            background-size: 100% 100%;
+            background-position: 0 0;
+            margin: 8% auto;
+            overflow: hidden;
+        }
+        
+        .carl {
+            text-align: center;
+            width: 54px;
+            height: 65px;
+            border-radius: 5px;
+            background: #ffe9ae;
+            color: #3e3a2a;
+            text-align: center;
+            line-height: 65px;
+            margin: 42.5px auto;
+            font-size: 12px;
+            box-shadow: 0 0 20px #ffe9ae;
+            -webkit-transition: -webkit-transform .4s;
+            transition: transform .4s;
+            -webkit-transform: rotateY(0deg) scale(1.5, 1.5);
+            transform: rotateY(0deg) scale(1.5, 1.5);
+        }
+        
+        .xuanzhuan {
+            -webkit-transform: rotateY(360deg) scale(1, 1);
+            transform: rotateY(360deg) scale(1, 1);
+        }
+        
+        .senlin {
+            position: absolute;
+            z-index: 4;
+            width: 49%;
+            height: 30%;
+            top: 61%;
+            left: 50%;
+            display: none;
+        }
+        
+        .baima {
+            position: absolute;
+            z-index: 4;
+            width: 53%;
+            height: 24%;
+            top: 24%;
+            left: 19%;
+            display: none;
+        }
+        
+        .hushan {
+            position: absolute;
+            z-index: 4;
+            width: 68%;
+            height: 48%;
+            top: 37%;
+            left: 13%;
+            display: none;
+        }
+        
+        .jiaoye {
+            position: absolute;
+            z-index: 4;
+            width: 56%;
+            height: 42%;
+            top: 36.5%;
+            left: 43%;
+            display: none;
+        }
+        
+        .tingtao {
+            position: absolute;
+            z-index: 4;
+            width: 83%;
+            height: 35.5%;
+            top: 35.5%;
+            left: -4%;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 主页 -->
+    <div class="pages-hmoe">
+        <img src="./images/home-bg.jpg" alt="" class="bg">
+        <img src="./images/buttom1.png" alt="" class="btn">
+        <img src="./images/senglin.png" alt="" class="senlin">
+        <img src="./images/baima.png" alt="" class="baima">
+        <img src="./images/hushan.png" alt="" class="hushan">
+        <img src="./images/jiaoye.png" alt="" class="jiaoye">
+        <img src="./images/tingtao.png" alt="" class="tingtao">
+        <div class="text">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/xin.png" alt=""> 王小明刚刚点亮的绿道，获得红包奖励88元
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/xin.png" alt=""> 王小明刚刚点亮的绿道，获得红包奖励88元
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/xin.png" alt=""> 王小明刚刚点亮的绿道，获得红包奖励88元
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主页结束 -->
+
+
+
+    <div class="pagesOne">
+        <img src="./images/pagesOne-bg.jpg" class="bg">
+        <img src="./images/text.png" alt="" class="text">
+        <div class="user-text">
+            <div class="user-text-box">
+                <img src="./images/text2.png" alt="" class="urser-text">
+                <img src="./images/user.png" alt="" class="user">
+            </div>
+        </div>
+        <img src="./images/list-text.png" alt="" class="list-text">
+        <div class="list">
+            <div class="list-box">
+                <div class="list-title">已有<span>123456</span>人获得红包</div>
+                <ul>
+                    <li>
+                        <div class="user-img">
+                            <span>1</span>
+                            <img src="./images/user.png" alt="">
+                        </div>
+                        <span>猫只啊</span>
+                        <div class="user-money">
+                            共得<span>118</span> 元
+                        </div>
+                    </li>
+                    <li>
+                        <div class="user-img">
+                            <span>2</span>
+                            <img src="./images/user.png" alt="">
+                        </div>
+                        <span>猫只啊</span>
+                        <div class="user-money">
+                            共得<span>118</span> 元
+                        </div>
+                    </li>
+                    <li>
+                        <div class="user-img">
+                            <span>3</span>
+                            <img src="./images/user.png" alt="">
+                        </div>
+                        <span>猫只啊</span>
+                        <div class="user-money">
+                            共得<span>118</span> 元
+                        </div>
+                    </li>
+                    <li>
+                        <div class="user-img">
+                            <span>4</span>
+                            <img src="./images/user.png" alt="">
+                        </div>
+                        <span>猫只啊</span>
+                        <div class="user-money">
+                            共得<span>118</span> 元
+                        </div>
+                    </li>
+
+                </ul>
+                <img src="./images/buttom.png" alt="" class="button">
+            </div>
+        </div>
+        <div class="pagesOne-model"></div>
+    </div>
+
+
+
+
+
+    <div class="model">
+        <img src="./images/text3.png" alt="" class="text">
+        <div class="quan">
+            <div class="carl">
+                森林道
+            </div>
+        </div>
+        <img src="./images/buttom2.png" alt="" class="button">
+    </div>
+
+
+</body>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: 3000, //可选选项，自动滑动
+        direction: 'vertical',
+        speed: 300,
+    })
+</script>
+<script>
+    $(".model").click(() => {
+        $(".model").fadeOut(200);
+    })
+
+
+    window.onload = () => {
+        $(".pages-hmoe").fadeIn(2000)
+        setTimeout(() => {
+            $(".model").fadeIn(1000)
+            setTimeout(() => {
+                $(".carl").addClass("xuanzhuan")
+            }, 1000)
+        }, 3000)
+    }
+</script>
+
+</html>
