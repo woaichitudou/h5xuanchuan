@@ -208,12 +208,13 @@
         }
         
         .pages-hmoe .btn {
-            width: 46%;
+            width: 50%;
             position: absolute;
             z-index: 1;
             bottom: 10%;
             left: 50%;
-            margin-left: -20%;
+            margin-left: -25%;
+            display: none;
         }
         
         .pages-hmoe .text {
@@ -298,54 +299,247 @@
             transform: rotateY(360deg) scale(1, 1);
         }
         
-        .senlin {
+        .senlin-box {
             position: absolute;
             z-index: 4;
-            width: 49%;
+            width: 0%;
             height: 30%;
             top: 61%;
             left: 50%;
-            display: none;
+            overflow: hidden;
+            transition: width 3s, height 3s;
+            -webkit-transition: width 3s, height 3s;
+        }
+        
+        .senlin {
+            display: block;
+        }
+        
+        .senlin-box-act {
+            width: 49%!important;
+            height: 30%!important;
+        }
+        
+        .baima-box {
+            position: absolute;
+            z-index: 4;
+            width: 0%;
+            height: 0%;
+            top: 24%;
+            left: 19%;
+            overflow: hidden;
+            transition: width 3s, height 3s;
+            -webkit-transition: width 3s, height 3s;
+        }
+        
+        .baima-box-act {
+            width: 53%!important;
+            height: 24%!important;
         }
         
         .baima {
+            display: block;
+        }
+        
+        .hushan-box {
             position: absolute;
             z-index: 4;
-            width: 53%;
-            height: 24%;
-            top: 24%;
-            left: 19%;
-            display: none;
+            width: 0%;
+            height: 0%;
+            top: 37%;
+            left: 13%;
+            overflow: hidden;
+            transition: width 3s, height 3s;
+            -webkit-transition: width 3s, height 3s;
         }
         
         .hushan {
+            display: block;
+        }
+        
+        .hushan-box-act {
+            width: 68%!important;
+            height: 48%!important;
+        }
+        
+        .jiaoye-box {
             position: absolute;
             z-index: 4;
-            width: 68%;
-            height: 48%;
-            top: 37%;
-            left: 13%;
-            display: none;
+            width: 0%;
+            height: 0%;
+            top: 36.5%;
+            left: 43%;
+            overflow: hidden;
+            transition: width 3s, height 3s;
+            -webkit-transition: width 3s, height 3s;
         }
         
         .jiaoye {
+            display: block;
+        }
+        
+        .jiaoye-box-act {
+            width: 56%!important;
+            height: 42%!important;
+        }
+        
+        .tingtao-box {
             position: absolute;
             z-index: 4;
-            width: 56%;
-            height: 42%;
-            top: 36.5%;
-            left: 43%;
-            display: none;
+            width: 0%;
+            height: 0%;
+            top: 35.5%;
+            left: -4%;
+            overflow: hidden;
+            transition: width 3s, height 3s;
+            -webkit-transition: width 3s, height 3s;
         }
         
         .tingtao {
+            display: block;
+        }
+        
+        .tingtao-box-act {
+            width: 83%!important;
+            height: 35.5%!important;
+        }
+        
+        .btn-act {
+            width: 50px;
+            height: 50px;
             position: absolute;
-            z-index: 4;
-            width: 83%;
-            height: 35.5%;
-            top: 35.5%;
-            left: -4%;
-            display: none;
+            left: 0;
+            top: 0;
+            z-index: 99;
+        }
+        
+        .senlin-btn {
+            width: 60px;
+            height: 60px;
+            background: #f00;
+            position: absolute;
+            z-index: 5;
+            left: 80%;
+            top: 76%;
+        }
+        
+        .hushan-btn {
+            width: 60px;
+            height: 60px;
+            background: #f00;
+            position: absolute;
+            z-index: 5;
+            left: 44%;
+            top: 65%;
+        }
+        
+        .jiaoye-btn {
+            width: 60px;
+            height: 60px;
+            background: #f00;
+            position: absolute;
+            z-index: 5;
+            left: 75%;
+            top: 50%;
+        }
+        
+        .tingtao-btn {
+            width: 60px;
+            height: 60px;
+            background: #f00;
+            position: absolute;
+            z-index: 5;
+            left: 7%;
+            top: 40%;
+        }
+        
+        .baima-btn {
+            width: 60px;
+            height: 60px;
+            background: #f00;
+            position: absolute;
+            z-index: 5;
+            left: 45%;
+            top: 22%;
+        }
+        
+        .senlin-btn-box {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .senlin-btn-box span {
+            font-size: 0.875rem;
+            color: #999999;
+            display: block;
+            position: absolute;
+            top: 100%;
+            width: 50px;
+        }
+        
+        .baima-btn-box {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .baima-btn-box span {
+            font-size: 0.875rem;
+            color: #999999;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 50px;
+        }
+        
+        .hushan-btn-box {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .hushan-btn-box span {
+            font-size: 0.875rem;
+            color: #999999;
+            display: block;
+            position: absolute;
+            left: 60%;
+            top: 60%;
+            width: 50px;
+        }
+        
+        .jiaoye-btn-box {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .jiaoye-btn-box span {
+            font-size: 0.875rem;
+            color: #999999;
+            display: block;
+            position: absolute;
+            left: 60%;
+            top: 60%;
+            width: 50px;
+        }
+        
+        .tingtao-btn-box {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .tingtao-btn-box span {
+            font-size: 0.875rem;
+            color: #999999;
+            display: block;
+            position: absolute;
+            left: 0%;
+            top: 30%;
+            width: 50px;
         }
     </style>
 </head>
@@ -355,11 +549,57 @@
     <div class="pages-hmoe">
         <img src="./images/home-bg.jpg" alt="" class="bg">
         <img src="./images/buttom1.png" alt="" class="btn">
-        <img src="./images/senglin.png" alt="" class="senlin">
-        <img src="./images/baima.png" alt="" class="baima">
-        <img src="./images/hushan.png" alt="" class="hushan">
-        <img src="./images/jiaoye.png" alt="" class="jiaoye">
-        <img src="./images/tingtao.png" alt="" class="tingtao">
+        <div class="senlin-btn">
+            <div class="senlin-btn-box">
+                <img src="" alt="" class="senlin-btn-guangyun">
+                <img src="" alt="" class="senlin-btn-yuandian">
+                <span>森林道</span>
+            </div>
+        </div>
+        <div class="senlin-box">
+            <img src="./images/senglin.png" alt="" class="senlin">
+        </div>
+        <div class="baima-btn">
+            <div class="baima-btn-box">
+                <img src="" alt="" class="baima-btn-guangyun">
+                <img src="" alt="" class="baima-btn-yuandian">
+                <span>白马道</span>
+            </div>
+        </div>
+        <div class="baima-box">
+            <img src="./images/baima.png" alt="" class="baima">
+        </div>
+        <div class="hushan-btn">
+            <div class="hushan-btn-box">
+                <img src="" alt="" class="hushan-btn-guangyun">
+                <img src="" alt="" class="hushan-btn-yuandian">
+                <span>湖山道</span>
+            </div>
+        </div>
+        <div class="hushan-box">
+            <img src="./images/hushan.png" alt="" class="hushan">
+        </div>
+        <div class="jiaoye-btn">
+            <div class="jiaoye-btn-box">
+                <img src="" alt="" class="jiaoye-btn-guangyun">
+                <img src="" alt="" class="jiaoye-btn-yuandian">
+                <span>郊野道</span>
+            </div>
+        </div>
+        <div class="jiaoye-box">
+            <img src="./images/jiaoye.png" alt="" class="jiaoye">
+        </div>
+        <div class="tingtao-btn">
+            <div class="tingtao-btn-box">
+                <img src="" alt="" class="tingtao-btn-guangyun">
+                <img src="" alt="" class="tingtao-btn-yuandian">
+                <span>听涛道</span>
+            </div>
+        </div>
+        <div class="tingtao-box">
+            <img src="./images/tingtao.png" alt="" class="tingtao">
+        </div>
+
         <div class="text">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -456,7 +696,9 @@
         <img src="./images/buttom2.png" alt="" class="button">
     </div>
 
+    <div class="cale-model">
 
+    </div>
 </body>
 <script>
     var mySwiper = new Swiper('.swiper-container', {
@@ -466,13 +708,180 @@
     })
 </script>
 <script>
+    var height = $(window).height()
+    var width = $(window).width()
+
+    $(".senlin").width(width * 0.49)
+    $(".senlin").height(height * 0.30)
+
+    $(".baima").width(width * 0.53)
+    $(".baima").height(height * 0.24)
+
+    $(".hushan").width(width * 0.68)
+    $(".hushan").height(height * 0.48)
+
+    $(".jiaoye").width(width * 0.56)
+    $(".jiaoye").height(height * 0.42)
+
+    $(".tingtao").width(width * 0.83)
+    $(".tingtao").height(height * 0.355)
+
+
+    var a = 1
+
+
+
+    $(".senlin-btn").click(() => {
+        //发ajax  判断是否存在对呀卡片 如果存在 显示对应地图 
+        if (a == 1) {
+            $(".senlin-box").addClass("senlin-box-act")
+        }
+        if (a == 2) {
+            $(".senlin-box").addClass("senlin-box-act")
+        }
+        if (a == 3) {
+
+        }
+
+    })
+
+    $(".baima-btn").click(() => {
+        if (a == 1) {
+            $(".baima-box").addClass("baima-box-act")
+        } else {
+
+        }
+
+    })
+
+    $(".tingtao-btn").click(() => {
+        if (a == 1) {
+            $(".tingtao-box").addClass("tingtao-box-act")
+        } else {
+
+        }
+
+    })
+
+
+    $(".jiaoye-btn").click(() => {
+        if (a == 1) {
+            $(".jiaoye-box").addClass("jiaoye-box-act")
+        } else {
+            // hushan-btn
+        }
+
+    })
+
+    $(".hushan-btn").click(() => {
+        if (a == 1) {
+            $(".hushan-box").addClass("hushan-box-act")
+        } else {
+            // 
+        }
+
+    })
+
+
+    var data = 1
+
+    //发ajax 判断森林路线的卡片是否存在 值可为1 2 3 如果是 1 存在卡片并且点亮 2 存在卡片没点亮 3 不存在卡片 
+    var senlin = () => {
+        // 这里发ajax 拿数据
+        if (data == 1) {
+            $(".senlin-box").addClass("senlin-box-act")
+            $(".senlin-btn-box span").css("color", "#fdd55d")
+        }
+        if (data == 2) {
+            $(".senlin-btn-yuandian").fadeIn(10)
+            $(".senlin-btn-guangyun").fadeIn(10)
+        }
+        if (data == 3) {
+            $(".senlin-btn-yuandian").fadeIn(10)
+        }
+    }
+
+    //发ajax 判断白马路线的卡片是否存在 值可为1 2 3 如果是 1 存在卡片并且点亮 2 存在卡片没点亮 3 不存在卡片 
+    var baima = () => {
+        // 这里发ajax 拿数据
+        if (data == 1) {
+            $(".baima-box").addClass("baima-box-act")
+            $(".baima-btn-box span").css("color", "#fdd55d")
+        }
+        if (data == 2) {
+            $(".baima-btn-yuandian").fadeIn(10)
+            $(".baima-btn-guangyun").fadeIn(10)
+        }
+        if (data == 3) {
+            $(".baima-btn-yuandian").fadeIn(10)
+        }
+    }
+
+    //发ajax 判断听涛路线的卡片是否存在 值可为1 2 3 如果是 1 存在卡片并且点亮 2 存在卡片没点亮 3 不存在卡片 
+    var tingtao = () => {
+        // 这里发ajax 拿数据
+        if (data == 1) {
+            $(".tingtao-box").addClass("tingtao-box-act")
+            $(".tingtao-btn-box span").css("color", "#fdd55d")
+        }
+        if (data == 2) {
+            $(".tingtao-btn-yuandian").fadeIn(10)
+            $(".tingtao-btn-guangyun").fadeIn(10)
+        }
+        if (data == 3) {
+            $(".tingtao-btn-yuandian").fadeIn(10)
+        }
+    }
+
+    //发ajax 判断郊野路线的卡片是否存在 值可为1 2 3 如果是 1 存在卡片并且点亮 2 存在卡片没点亮 3 不存在卡片 
+    var jiaoye = () => {
+        // 这里发ajax 拿数据
+        if (data == 1) {
+            $(".jiaoye-box").addClass("jiaoye-box-act")
+            $(".jiaoye-btn-box span").css("color", "#fdd55d")
+        }
+        if (data == 2) {
+            $(".jiaoye-btn-yuandian").fadeIn(10)
+            $(".jiaoye-btn-guangyun").fadeIn(10)
+        }
+        if (data == 3) {
+            $(".jiaoye-btn-yuandian").fadeIn(10)
+        }
+    }
+
+    //发ajax 判断郊野路线的卡片是否存在 值可为1 2 3 如果是 1 存在卡片并且点亮 2 存在卡片没点亮 3 不存在卡片 
+    var hushan = () => {
+        // 这里发ajax 拿数据
+        if (data == 1) {
+            $(".hushan-box").addClass("hushan-box-act")
+            $(".hushan-btn-box span").css("color", "#fdd55d")
+        }
+        if (data == 2) {
+            $(".hushan-btn-yuandian").fadeIn(10)
+            $(".hushan-btn-guangyun").fadeIn(10)
+        }
+        if (data == 3) {
+            $(".hushan-btn-yuandian").fadeIn(10)
+        }
+    }
+
+
+
+
+
     $(".model").click(() => {
         $(".model").fadeOut(200);
+        $(".pages-hmoe .btn").fadeIn(200)
     })
 
 
     window.onload = () => {
         $(".pages-hmoe").fadeIn(2000)
+        senlin()
+        hushan()
+        jiaoye()
+        baima()
+        tingtao()
         setTimeout(() => {
             $(".model").fadeIn(1000)
             setTimeout(() => {
